@@ -15,8 +15,9 @@ export function isExternal(path) {
  * @returns {Boolean}
  */
 export function validUsername(str) {
-  const valid_map = ['admin', 'editor']
-  return valid_map.indexOf(str.trim()) >= 0
+  // const valid_map = ['admin', 'editor']
+  // return valid_map.indexOf(str.trim()) >= 0
+  return str.search(/^[a-zA-Z0-9_]{4,16}$/) !== -1
 }
 
 /**
@@ -24,5 +25,5 @@ export function validUsername(str) {
  * @returns {Boolean}
  */
 export function validQQ(str) {
-  return str.search(/^[1-9]\d{4,8}$/) !== -1
+  return str.search(/^[1-9]\d{4,10}$/) !== -1
 }
